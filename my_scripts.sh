@@ -2,6 +2,7 @@
 #my_scripts.sh
 #Chad A. Moore
 #Created April 24, 2014
+# Various command line scripts, see .bash_alias for aliases for these funcs
 
 # my_grep_function() - greps thru all the files types in the array below
 # and returns matches to a text file and piped to less
@@ -37,11 +38,17 @@ my_grep_function() {
   echo "grepping complete! "
 }
 
-my_git_stat_func() {
+my_long_git_stat_func() {
 
   git status > git.status.txt
 
   less git.status.txt
+}
+
+my_git_stat_func() {
+
+  git status 
+
 }
 
 my_git_graph() {
