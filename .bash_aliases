@@ -5,16 +5,36 @@
 # load my scripts
 . "$HOME/chad-script/my_scripts.sh"
 
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
 # create aliases for common commands
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 alias c='clear'
 alias gh='cd ~'
 alias g='my_grep_function'
+alias t='my_tail_func'
+alias s='source ~/.profile'
+alias hk='print_my_aliases'
 
 # create aliases for git stuff
 alias gs='my_git_stat_func'
-alias gl='my_git_graph'
+alias gl='my_long_git_stat_func'
+alias gg='my_git_graph'
 alias gitp='my_git_pretty'
 
 #project specific aliases
-alias gmp='cd ~/fusion/covance/marketplace'
-alias gmpc='cd ~/fusion/covance/marketplace/code/marketplace'
+alias p='my_cov_mp_ps_func'
+alias gmpc='cd /home/cmoore/fusion/covance/marketplace/code/marketplace'
+

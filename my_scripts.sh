@@ -30,7 +30,6 @@ my_grep_function() {
   else
     for t in "${FileTypes[@]}"
     do
-      echo "grep -n$2$3 --include" '"'$t'"'" $1 ."
       grep -an$2$3 --include "$t" $1 .
     done
   fi
@@ -58,4 +57,17 @@ my_git_graph() {
 }
 my_git_pretty() {
   git log --pretty=format:"%h - %an, %ar : %s"
+}
+
+my_tail_func() {
+  tail -f $1
+}
+my_cov_mp_ps_func() {
+  ps -e | grep node
+  ps -e | grep mongod
+  ps -e | grep java
+}
+
+print_my_aliases() {
+  cat /home/cmoore/.bash_aliases
 }
