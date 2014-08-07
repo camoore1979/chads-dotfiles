@@ -36,5 +36,5 @@ alias gitp='my_git_pretty'
 
 #project specific aliases
 alias p='my_cov_mp_ps_func'
-alias gmpc='cd /home/cmoore/fusion/covance/marketplace/code/marketplace'
+alias gmpc='cd ~/fusion/covance/marketplace/code/marketplace'
 
