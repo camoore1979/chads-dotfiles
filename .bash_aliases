@@ -45,4 +45,5 @@ alias curlPost='curlPostTest'
 
 #project specific aliases
 alias gts='cd ~/tribescribe/code/tribescribe-mvp'
+alias gmpc='cd ~/fusion/covance/marketplace/code/marketplace'
 
