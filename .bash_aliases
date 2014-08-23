@@ -21,11 +21,12 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias lh='ls -hF --color=tty'
 alias c='clear'
 alias gh='cd ~'
 alias g='my_grep_function'
 alias t='my_tail_func'
-alias s='source ~/.profile'
+alias s='source ~/.bash_profile'
 alias hk='print_my_aliases'
 
 # create aliases for git stuff
@@ -34,7 +35,14 @@ alias gl='my_long_git_stat_func'
 alias gg='my_git_graph'
 alias gitp='my_git_pretty'
 
-#project specific aliases
+
+alias pa='print_my_aliases'
 alias p='my_cov_mp_ps_func'
-alias gmpc='cd /home/cmoore/fusion/covance/marketplace/code/marketplace'
+
+# create aliases for my curl commands
+alias curlGet='curlGetTest'
+alias curlPost='curlPostTest'
+
+#project specific aliases
+alias gts='cd ~/tribescribe/code/tribescribe-mvp'
 

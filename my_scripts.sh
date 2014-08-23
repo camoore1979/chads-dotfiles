@@ -69,5 +69,27 @@ my_cov_mp_ps_func() {
 }
 
 print_my_aliases() {
-  cat /home/cmoore/.bash_aliases
+  cat ~/.bash_aliases
 }
+
+
+#functions for executing Curl commands, JSON data is assumed 
+curlGetTest() {
+  curl --silent --show-error -H "Content-Type: application/json" $1  > ./test.json
+  python -m json.tool ./test.json 
+}
+  
+curlPostTest() {
+
+  curl --silent --show-error -X POST -H "Content-Type: application/json" -d$1  $2 > ./test.json
+  python -m json.tool ./test.json
+
+}
+
+
+
+
+
+
+
+
