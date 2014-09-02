@@ -50,11 +50,19 @@ my_git_stat_func() {
 
 }
 
+
 my_git_graph() {
 
-  git log --pretty=format:"%h %s" --graph
+  git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
 }
+
+my_git_graph2() {
+
+  git log --date=short --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit 
+
+}
+
 my_git_pretty() {
   git log --pretty=format:"%h - %an, %ar : %s"
 }

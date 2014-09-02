@@ -34,7 +34,7 @@ alias gs='my_git_stat_func'
 alias gl='my_long_git_stat_func'
 alias gg='my_git_graph'
 alias gitp='my_git_pretty'
-
+alias gg2='my_git_graph2'
 
 alias pa='print_my_aliases'
 alias p='my_cov_mp_ps_func'
