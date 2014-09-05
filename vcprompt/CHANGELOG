@@ -1,0 +1,81 @@
+1.0.2 (????-??-??)
+------------------
+
+* Added: -t/--timeout option for limiting max execution time
+* Fixed: '%m', '%u' tokens in Bazaar
+* Fixed: '%u' token always being shown in Python 3.
+* Fixed '%r' and '%h' tokens in Mercurual 1.5
+* Changed: Better handling of '%a' and '%m' token in Subversion
+* Changed: Test repos are now created on the fly before tests are run
+* Removed: Internal '--without-environment' option
+
+
+1.0.1 (2012-11-07)
+------------------
+
+* Fixed: '%P' token works in Python < 2.6 again.
+* Fixed: vcprompt will not implode when executables cannot be found
+* Changed: Renamed HISTORY to CHANGELOG (oh my, how meta! again!)
+
+
+1.0.0 (2012-10-16)
+------------------
+
+* Added: Python 2.4 support
+* Added: Python 3 support
+* Added: '--without-environment' option for ignoring environment variables.
+* Added: Options to change status characters (modified/untracked files, etc.)
+* Added: '%p' and '%P' format tokens.
+* Changed: '--values SYSTEMS' is now just '--systems'
+* Changed: Test repositories are stored externally (except Fossil).
+* Changed: The '%i' format token has been replaced with '%m' and '%u' tokens.
+* Fixed: CVS is now aware of all formatting arguments.
+* Fixed: Errors are now written to stderr.
+* Fixed: Fixed a bug with Bazaar hashes not being calculated correctly.
+* Fixed: Handling of new/empty repositories.
+* Removed: The '-d/--max-depth' option.
+* Removed: Useless Python packaging.
+
+
+0.1.4 (2010-05-25)
+------------------
+
+* Fixed: The '%h' format argument now works correctly with Bazaar.
+* Changed: The help output is slightly less ugly.
+
+
+0.1.3 (2010-04-26)
+------------------
+
+* Fixed: Fixed all known bugs in tests.
+
+
+0.1.2 (2010-04-24)
+------------------
+
+* Fixed: Subdirectories are now correctly processed.
+* Fixed: Correct manpages and help text.
+
+
+0.1.1 (2010-04-18)
+------------------
+
+* Added: Support for Git < 1.7.0.
+* Added: ``--max-depth`` option for limiting the depth of directories to
+  traverse.
+* Changed: The ``--systems`` option is now used for passing in systems to use.
+  The old ``--systems`` behaviour is now available with ``--values systems``.
+* Bugfix: Environment variables are ignored when tests are running.
+
+
+0.1.0 (2010-03-20)
+------------------
+
+* Added: manpages.
+* Added: history file (oh my, how meta!).
+* Added: Formatting support for Fossil.
+* Changed: Merged the two new decorators into the original ``vcs`` decorator.
+* Changed: Renamed ``--unknown`` flag to ``--values``.
+* Changed: The ``--unknown`` flag is now used for setting the 'unknown' value.
+* Bugfix: The '%i' format argument no longer fails with multiple character statuses.
+* Bugfix: The '%i' format argument no longer ignores punctuation.

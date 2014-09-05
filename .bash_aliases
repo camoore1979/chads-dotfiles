@@ -47,3 +47,6 @@ alias curlPost='curlPostTest'
 alias gts='cd ~/tribescribe/code/tribescribe-mvp'
 alias gmpc='cd ~/fusion/covance/marketplace/code/marketplace'
 alias gmp='cd ~/covance/marketplace'
+
+#configure command line prompt
+PS1="\n\[\e[0;32m\]\u\[\e[0m\]\[\e[0;35m\]@\[\e[0m\]\[\e[0;32m\]\h\[\e[0m\]\[\e[0;35m\]:\[\e[0m\]\w \[\e[0;31m\]\$(vcprompt -f '%b%m%a%u') \[\e[0m\] ~\n\$  "
