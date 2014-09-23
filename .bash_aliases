@@ -2,6 +2,9 @@
 # loaded by .bashrc if this file exists
 # Chad A. Moore, April 25, 2014
 
+# add my local bin to Path
+export PATH="~/bin:/usr/local/bin:$PATH"
+
 # load my scripts
 . "$HOME/dotfiles/my_scripts.sh"
 
