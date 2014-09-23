@@ -3,7 +3,7 @@
 # Chad A. Moore, April 25, 2014
 
 # load my scripts
-. "$HOME/chad-script/my_scripts.sh"
+. "$HOME/dotfiles/my_scripts.sh"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -40,8 +40,10 @@ alias pa='print_my_aliases'
 alias p='my_cov_mp_ps_func'
 
 # create aliases for my curl commands
-alias curlGet='curlGetTest'
-alias curlPost='curlPostTest'
+alias curlG='curlGetTest'
+alias curlP='curlPostTest'
+alias curlPu='curlPutTest'
+alias curlD='curlDelete'
 
 #project specific aliases
 alias gts='cd ~/tribescribe/code/tribescribe-mvp'
