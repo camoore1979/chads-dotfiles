@@ -27,7 +27,7 @@ alias l='ls -CF'
 alias lh='ls -hF --color=tty'
 alias c='clear'
 alias gh='cd ~'
-alias g='my_grep_function'
+alias gr='my_grep_function'
 alias t='my_tail_func'
 alias s='source ~/.bash_profile'
 alias hk='print_my_aliases'
@@ -54,4 +54,7 @@ alias gmpc='cd ~/fusion/covance/marketplace/code/marketplace'
 alias gmp='cd ~/covance/marketplace'
 
 #configure command line prompt
-PS1="\n\[\e[0;32m\]\u\[\e[0m\]\[\e[0;35m\]@\[\e[0m\]\[\e[0;32m\]\h\[\e[0m\]\[\e[0;35m\]:\[\e[0m\]\w \[\e[0;31m\]\$(vcprompt -f '%b%m%a%u') \[\e[0m\] ~\n\$  "
+PS1="\n\[\e[0;32m\]\u\[\e[0m\]\[\e[0;35m\]@\[\e[0m\]\[\e[0;32m\]\h\[\e[0m\]\[\e[0;35m\]:\[\e[0m\]\w \[\e[0;31m\]\\[\e[0m\] ~\n\$  "
+
+#this works better on linux, but is slow on cygwin:
+#PS1="\n\[\e[0;32m\]\u\[\e[0m\]\[\e[0;35m\]@\[\e[0m\]\[\e[0;32m\]\h\[\e[0m\]\[\e[0;35m\]:\[\e[0m\]\w \[\e[0;31m\]\$(vcprompt -f '%b%m%a%u') \[\e[0m\] ~\n\$  "
