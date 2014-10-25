@@ -32,6 +32,9 @@ alias t='my_tail_func'
 alias s='source ~/.bash_profile'
 alias hk='print_my_aliases'
 
+# vim aliases
+alias v='vim'
+
 # create aliases for git stuff
 alias gs='my_git_stat_func'
 alias gl='my_long_git_stat_func'
@@ -46,7 +49,12 @@ alias p='my_cov_mp_ps_func'
 alias curlG='curlGetTest'
 alias curlP='curlPostTest'
 alias curlPu='curlPutTest'
-alias curlD='curlDelete'
+alias curlD='curlDeleteTest'
+
+alias curlGH='curlGetTestwAuth'
+alias curlPH='curlPostTestwAuth'
+alias curlPuH='curlPutTestwAuth'
+alias curlDH='curlDeleteTestwAuth'
 
 #project specific aliases
 alias gts='cd ~/tribescribe/code/tribescribe-mvp'
@@ -54,4 +62,9 @@ alias gmpc='cd ~/fusion/covance/marketplace/code/marketplace'
 alias gmp='cd ~/covance/marketplace'
 
 #configure command line prompt
-PS1="\n\[\e[0;32m\]\u\[\e[0m\]\[\e[0;35m\]@\[\e[0m\]\[\e[0;32m\]\h\[\e[0m\]\[\e[0;35m\]:\[\e[0m\]\w \[\e[0;31m\]\$(vcprompt -f '%b%m%a%u') \[\e[0m\] ~\n\$  "
+
+PS1="\n\[\e[0;32m\]\u\[\e[0m\]\[\e[0;35m\]@\[\e[0m\]\[\e[0;32m\]\h\[\e[0m\]\[\e[0;35m\]:\[\e[0m\]\w \[\e[0;31m\]\\[\e[0m\] ~\n\$  "
+
+
+#example of same command line prompt using vcprompt
+#PS1="\n\[\e[0;32m\]\u\[\e[0m\]\[\e[0;35m\]@\[\e[0m\]\[\e[0;32m\]\h\[\e[0m\]\[\e[0;35m\]:\[\e[0m\]\w \[\e[0;31m\]\$(vcprompt -f '%b%m%a%u') \[\e[0m\] ~\n\$  "
