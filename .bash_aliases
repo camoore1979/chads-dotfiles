@@ -7,6 +7,7 @@ export PATH="~/bin:/usr/local/bin:$PATH"
 
 # load my scripts
 . "$HOME/dotfiles/my_scripts.sh"
+. "$HOME/dotfiles/my_curl_scripts.sh"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -55,6 +56,8 @@ alias curlGH='curlGetTestwAuth'
 alias curlPH='curlPostTestwAuth'
 alias curlPuH='curlPutTestwAuth'
 alias curlDH='curlDeleteTestwAuth'
+
+alias curlLoginChad='curlPostLogin'
 
 #project specific aliases
 alias gts='cd ~/tribescribe/code/tribescribe-mvp'
