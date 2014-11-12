@@ -101,8 +101,36 @@ curlGetWAuth() {
   authHeader="Authorization: Token: "
   authToken=$(cat authToken.txt)
 
-  #echo $authHeader$authToken
   curl --silent --show-error -H"$authHeader$authToken" $1 > test.json
   python -m json.tool test.json
   rm test.json
 }
+
+curlPostWAuth() {
+  authHeader="Authorization: Token: "
+  authToken=$(cat authToken.txt)
+
+  curl --silent --show-error -X POST -H"$authHeader$authToken" -H"Content-Type: application/json" -d$1 $2 > ./test.json
+  python -m json.tool test.json
+  rm test.json
+
+}
+
+curlPutWAuth() {
+  authHeader="Authorization: Token: "
+  authToken=$(cat authToken.txt)
+
+  curl --silent --show-error -X PUT -H"$authHeader$authToken" -H"Content-Type: application/json" -d$1 $2 > ./test.json
+  python -m json.tool test.json
+  rm test.json
+}
+
+curlDeleteWAuth() {
+  authHeader="Authorization: Token: "
+  authToken=$(cat authToken.txt)
+
+  curl --silent --show-error -X DELETE -H"$authHeader$authToken" $1 > test.json
+  python -m json.tool test.json
+  rm test.json
+}
+

@@ -57,7 +57,12 @@ alias curlPH='curlPostTestwAuth'
 alias curlPuH='curlPutTestwAuth'
 alias curlDH='curlDeleteTestwAuth'
 
-alias curlLoginChad='curlPostLogin'
+alias getWAuth='curlGetWAuth'
+alias postWAuth='curlPostWAuth'
+alias putWAuth='curlPutWAuth'
+alias deleteWAuth='curlDeleteWAuth'
+
+alias loginChad='curlPostLogin'
 
 #project specific aliases
 alias gts='cd ~/tribescribe/code/tribescribe-mvp'
