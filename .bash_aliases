@@ -66,7 +66,7 @@ alias loginChad='curlPostLogin'
 
 #project specific aliases
 alias gts='cd ~/tribescribe/code/tribescribe-mvp'
-alias gmpc='cd ~/fusion/covance/marketplace/code/marketplace'
+alias gpn='cd ~/project_ninja/code/project_ninja'
 alias gmp='cd ~/covance/marketplace'
 
 #configure command line prompt
