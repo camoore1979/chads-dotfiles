@@ -6,8 +6,11 @@
 export PATH="~/bin:/usr/local/bin:$PATH"
 
 # load my scripts
-. "$HOME/dotfiles/my_scripts.sh"
+. "$HOME/dotfiles/my_grep_scripts.sh"
+. "$HOME/dotfiles/my_git_scripts.sh"
 . "$HOME/dotfiles/my_curl_scripts.sh"
+. "$HOME/dotfiles/my_misc_scripts.sh"
+
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
