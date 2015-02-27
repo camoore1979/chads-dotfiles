@@ -40,6 +40,10 @@ alias hk='print_my_aliases'
 alias v='vim'
 
 # create aliases for git stuff
+alias gb='my_git_branches_func'
+alias gbr='my_git_remote_branches_func'
+alias gc='my_git_commit_func'
+alias ga='my_git_add_func'
 alias gs='my_git_stat_func'
 alias gl='my_long_git_stat_func'
 alias gg='my_git_graph'
