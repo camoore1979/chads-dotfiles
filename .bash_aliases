@@ -33,7 +33,7 @@ alias c='clear'
 alias gh='cd ~'
 alias gr='my_grep_function'
 alias t='my_tail_func'
-alias s='source ~/.bash_profile'
+alias s='source ~/.bash_profile;source ~/.profile;source ~/.bashrc'
 alias hk='print_my_aliases'
 
 # vim aliases
@@ -75,6 +75,8 @@ alias loginChad='curlPostLogin'
 alias gts='cd ~/tribescribe/code/tribescribe-mvp'
 alias gpn='cd ~/project_ninja/code/project_ninja'
 alias gmp='cd ~/covance/marketplace'
+alias gst='cd ~/stonetracker'
+
 
 #configure command line prompt
 PS1="\n\[\e[0;32m\]\u\[\e[0m\]\[\e[0;35m\]@\[\e[0m\]\[\e[0;32m\]\h\[\e[0m\]\[\e[0;35m\]:\[\e[0m\]\w \[\e[0;31m\]\\[\e[0m\] ~\n\$  "
