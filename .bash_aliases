@@ -79,7 +79,10 @@ alias gmt='cd ~/mooretrac'
 alias gmd='cd ~/mooretrac/mooretrac-devops'
 alias gma='cd ~/mooretrac/mooretrac-php-app'
 
-#configure command line prompt
-#PS1="\n\[\e[0;32m\]\u\[\e[0m\]\[\e[0;35m\]@\[\e[0m\]\[\e[0;32m\]\h\[\e[0m\]\[\e[0;35m\]:\[\e[0m\]\w \[\e[0;31m\]\\[\e[0m\] ~\n\$  "
+alias grmpjs='grep_mp_js_code'
+alias grmpnd='grep_mp_node_code'
+alias grmphbs='grep_mp_hbs_code'
+alias grmpcss='grep_mp_css_code'
 
-#PS1="\n\[\e[0;32m\]\u\[\e[0m\]\[\e[0;35m\]@\[\e[0m\]\[\e[0;32m\]\h\[\e[0m\]\[\e[0;35m\]:\[\e[0m\]\w \[\e[0;31m\]\$(vcprompt -f '%b%m%a%u') \[\e[0m\] ~\n\$  "
+source ~/.bash-git-prompt/gitprompt.sh
+GIT_PROMPT_ONLY_IN_REPO=1
