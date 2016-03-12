@@ -1,6 +1,4 @@
 # ~/.bash_aliases
-# loaded by .bashrc if this file exists
-# Chad A. Moore, April 25, 2014
 
 # add my local bin to Path
 export PATH="~/bin:/usr/local/bin:$PATH"
@@ -29,6 +27,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias lh='ls -hF --color=tty'
+alias ld='ls -d */'
 alias c='clear'
 alias gh='cd ~'
 alias gr='my_grep_function'
@@ -72,18 +71,16 @@ alias deleteWAuth='curlDeleteWAuth'
 alias loginChad='curlPostLogin'
 
 #project specific aliases
-alias gts='cd ~/tribescribe/code/tribescribe-mvp'
+alias gts='cd ~/tribescribe/tribescribe-mvp'
 alias gpn='cd ~/project_ninja/code/project_ninja'
 alias gmp='cd ~/covance/marketplace'
+alias gst='cd ~/stonetracker'
+
+
 alias grmpjs='grep_mp_js_code'
 alias grmpnd='grep_mp_node_code'
 alias grmphbs='grep_mp_hbs_code'
 alias grmpcss='grep_mp_css_code'
-
-
-#configure command line prompt
-PS1="\n\[\e[0;32m\]\u\[\e[0m\]\[\e[0;35m\]@\[\e[0m\]\[\e[0;32m\]\h\[\e[0m\]\[\e[0;35m\]:\[\e[0m\]\w \[\e[0;31m\]\\[\e[0m\] ~\n\$  "
-
 
 source ~/.bash-git-prompt/gitprompt.sh
 GIT_PROMPT_ONLY_IN_REPO=1
