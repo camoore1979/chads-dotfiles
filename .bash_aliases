@@ -75,7 +75,9 @@ alias gts='cd ~/tribescribe/tribescribe-mvp'
 alias gpn='cd ~/project_ninja/code/project_ninja'
 alias gmp='cd ~/covance/marketplace'
 alias gst='cd ~/stonetracker'
-
+alias gmt='cd ~/mooretrac'
+alias gmd='cd ~/mooretrac/mooretrac-devops'
+alias gma='cd ~/mooretrac/mooretrac-php-app'
 
 #configure command line prompt
 #PS1="\n\[\e[0;32m\]\u\[\e[0m\]\[\e[0;35m\]@\[\e[0m\]\[\e[0;32m\]\h\[\e[0m\]\[\e[0;35m\]:\[\e[0m\]\w \[\e[0;31m\]\\[\e[0m\] ~\n\$  "
