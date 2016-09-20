@@ -9,6 +9,9 @@ export PATH="~/bin:/usr/local/bin:$PATH"
 . "$HOME/dotfiles/my_curl_scripts.sh"
 . "$HOME/dotfiles/my_misc_scripts.sh"
 
+# add git info to command line prompt
+source ~/.bash-git-prompt/gitprompt.sh
+GIT_PROMPT_ONLY_IN_REPO=1
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -50,7 +53,6 @@ alias gitp='my_git_pretty'
 alias gg2='my_git_graph2'
 
 alias pa='print_my_aliases'
-alias p='my_cov_mp_ps_func'
 
 # create aliases for my curl commands
 alias curlG='curlGetTest'
@@ -70,19 +72,3 @@ alias deleteWAuth='curlDeleteWAuth'
 
 alias loginChad='curlPostLogin'
 
-#project specific aliases
-alias gts='cd ~/tribescribe/tribescribe-mvp'
-alias gpn='cd ~/project_ninja/code/project_ninja'
-alias gmp='cd ~/covance/marketplace'
-alias gst='cd ~/stonetracker'
-alias gmt='cd ~/mooretrac'
-alias gmd='cd ~/mooretrac/mooretrac-devops'
-alias gma='cd ~/mooretrac/mooretrac-php-app'
-
-alias grmpjs='grep_mp_js_code'
-alias grmpnd='grep_mp_node_code'
-alias grmphbs='grep_mp_hbs_code'
-alias grmpcss='grep_mp_css_code'
-
-source ~/.bash-git-prompt/gitprompt.sh
-GIT_PROMPT_ONLY_IN_REPO=1
