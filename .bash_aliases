@@ -1,4 +1,5 @@
 # ~/.bash_aliases
+# Chad's dotfiles
 
 # add my local bin to Path
 export PATH="~/bin:/usr/local/bin:$PATH"
@@ -25,6 +26,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+alias pa='print_my_aliases'
+alias s='source ~/.bash_aliases'
+alias ts='echo "hello"'
+
 # create aliases for common commands
 alias ll='ls -alF'
 alias la='ls -A'
@@ -35,24 +40,22 @@ alias c='clear'
 alias gh='cd ~'
 alias gr='my_grep_function'
 alias t='my_tail_func'
-alias s='source ~/.bash_profile'
-alias hk='print_my_aliases'
 
 # vim aliases
 alias v='vim'
 
 # create aliases for git stuff
-alias gb='my_git_branches_func'
+alias gb='git branch'
+alias gs='git status'
 alias gbr='my_git_remote_branches_func'
 alias gc='my_git_commit_func'
 alias ga='my_git_add_func'
-alias gs='my_git_stat_func'
+alias gaa='git add -A'
 alias gl='my_long_git_stat_func'
 alias gg='my_git_graph'
 alias gitp='my_git_pretty'
 alias gg2='my_git_graph2'
 
-alias pa='print_my_aliases'
 
 # create aliases for my curl commands
 alias curlG='curlGetTest'
