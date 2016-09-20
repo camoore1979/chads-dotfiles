@@ -5,15 +5,25 @@
 export PATH="~/bin:/usr/local/bin:$PATH"
 
 # load my scripts
+#TODO: move this to it's own script
 . "$HOME/dotfiles/my_grep_scripts.sh"
 . "$HOME/dotfiles/my_git_scripts.sh"
 . "$HOME/dotfiles/my_curl_scripts.sh"
 . "$HOME/dotfiles/my_misc_scripts.sh"
 
 # add git info to command line prompt
-source ~/.bash-git-prompt/gitprompt.sh
-GIT_PROMPT_ONLY_IN_REPO=1
+if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
+  source ~/.bash-git-prompt/gitprompt.sh
+  GIT_PROMPT_ONLY_IN_REPO=1
+  echo "bash-git-prompt loaded..."
+fi
 
+if [ -f ~/.project_aliases ]; then
+  source ~/.project_aliases
+  echo ".project_aliases loaded.."
+fi
+
+#TODO: move this to it's own script
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
