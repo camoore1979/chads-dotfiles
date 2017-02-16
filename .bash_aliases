@@ -11,6 +11,7 @@ export PATH="~/bin:/usr/local/bin:$PATH"
 . "$HOME/dotfiles/my_curl_scripts.sh"
 . "$HOME/dotfiles/my_misc_scripts.sh"
 
+
 # add git info to command line prompt
 if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
   source ~/.bash-git-prompt/gitprompt.sh
@@ -21,6 +22,11 @@ fi
 if [ -f ~/.project_aliases ]; then
   source ~/.project_aliases
   echo ".project_aliases loaded.."
+fi
+
+if [ -f ~/git-completion.bash ]; then
+  . ~/git-completion.bash
+  echo "git-completion.bash loaded"
 fi
 
 #TODO: move this to it's own script
