@@ -13,11 +13,11 @@ export PATH="~/bin:/usr/local/bin:$PATH"
 
 
 # add git info to command line prompt
-if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
-  source ~/.bash-git-prompt/gitprompt.sh
-  GIT_PROMPT_ONLY_IN_REPO=1
-  echo "bash-git-prompt loaded..."
-fi
+#if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
+#  source ~/.bash-git-prompt/gitprompt.sh
+#  GIT_PROMPT_ONLY_IN_REPO=1
+#  echo "bash-git-prompt loaded..."
+#fi
 
 if [ -f ~/.project_aliases ]; then
   source ~/.project_aliases
