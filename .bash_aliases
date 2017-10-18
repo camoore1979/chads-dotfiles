@@ -4,6 +4,12 @@
 # add my local bin to Path
 export PATH="~/bin:/usr/local/bin:$PATH"
 
+#customize bash shell prompt
+# for more, see https://www.howtogeek.com/307701/how-to-customize-and-colorize-your-bash-prompt/
+#PS1="\u\$ "
+PS1="\u@\h:\w\$ "
+#PS1="\[\034[0;32m\]✔\[\033[0;0m\] \[\033[0;33m\]\w\[\033[0;0m\]  $ "
+
 # load my scripts
 #TODO: move this to it's own script
 . "$HOME/dotfiles/my_grep_scripts.sh"
@@ -13,11 +19,12 @@ export PATH="~/bin:/usr/local/bin:$PATH"
 
 
 # add git info to command line prompt
-#if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
-#  source ~/.bash-git-prompt/gitprompt.sh
-#  GIT_PROMPT_ONLY_IN_REPO=1
-#  echo "bash-git-prompt loaded..."
-#fi
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+    __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+    source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+
+GIT_PROMPT_ONLY_IN_REPO=1
 
 if [ -f ~/.project_aliases ]; then
   source ~/.project_aliases
@@ -43,7 +50,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias pa='print_my_aliases'
-alias s='source ~/.bash_aliases'
+alias s='source ~/.bash_profile'
 alias ts='echo "hello"'
 
 # create aliases for common commands
@@ -90,4 +97,3 @@ alias putWAuth='curlPutWAuth'
 alias deleteWAuth='curlDeleteWAuth'
 
 alias loginChad='curlPostLogin'
-
