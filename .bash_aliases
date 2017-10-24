@@ -31,8 +31,8 @@ if [ -f ~/.project_aliases ]; then
   echo ".project_aliases loaded.."
 fi
 
-if [ -f ~/git-completion.bash ]; then
-  . ~/git-completion.bash
+if [ -f ~/dotfiles/git-completion.bash ]; then
+  . ~/dotfiles/git-completion.bash
   echo "git-completion.bash loaded"
 fi
 
