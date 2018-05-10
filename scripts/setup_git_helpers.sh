@@ -3,7 +3,7 @@
 # add git info to command line prompt
 if [ -z "$(command -v brew)" ]; then 
 
-  if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
+  if [ -f ~/.bash-git-prompt/gitprompt.sh && "$SKIP_BASH_GIT_PROMPT" != "TRUE" ]; then
     GIT_PROMPT_ONLY_IN_REPO=1
     source ~/.bash-git-prompt/gitprompt.sh
     echo "bash-git-prompt loaded..."
