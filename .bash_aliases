@@ -11,21 +11,11 @@ PS1="\u@\h:\w\$ "
 #PS1="\[\034[0;32m\]✔\[\033[0;0m\] \[\033[0;33m\]\w\[\033[0;0m\]  $ "
 
 # Load my Scripts
-#TODO: move this to it's own script
-. "$HOME/dotfiles/scripts/my_grep_scripts.sh"
-. "$HOME/dotfiles/scripts/my_git_scripts.sh"
-. "$HOME/dotfiles/scripts/my_curl_scripts.sh"
-. "$HOME/dotfiles/scripts/my_misc_scripts.sh"
-. "$HOME/dotfiles/scripts/setup_git_helpers.sh"
-. "$HOME/dotfiles/scripts/configure_cl_colors.sh"
+. "$HOME/dotfiles/scripts/index.sh"
 
 # Load Aliases
-alias pa='print_my_aliases'
-alias s='source ~/.bash_profile'
-alias ts='echo "hello"'
-. "$HOME/dotfiles/aliases/curl.sh"
-. "$HOME/dotfiles/aliases/git.sh"
-. "$HOME/dotfiles/aliases/linux_cl.sh"
+. "$HOME/dotfiles/aliases/index.sh"
+
 if [ -f ~/.project_aliases ]; then
   source ~/.project_aliases
   echo ".project_aliases loaded.."
