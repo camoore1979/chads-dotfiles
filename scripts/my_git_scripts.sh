@@ -34,6 +34,10 @@ my_git_commit_func() {
 
 }
 
+my_git_push_origin_func() {
+  git push --set-upstream origin $1
+}
+
 
 my_git_graph() {
 
