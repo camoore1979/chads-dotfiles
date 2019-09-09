@@ -1,14 +1,12 @@
 #!/bin/bash
 #Chad A. Moore
-#Created April 24, 2014
-
-
-my_git_branches_func() {
-  git branch
-}
 
 my_git_remote_branches_func() {
   git branch -r
+}
+
+my_git_checkout_branch_func() {
+  git checkout $1
 }
 
 my_long_git_stat_func() {
