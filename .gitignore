@@ -1,3 +1,6 @@
+# .bash_aliases is created on install from a script, don't track in git
+# .bash_aliases
+
 #ignore these files
 git.status.txt
 /.idea
