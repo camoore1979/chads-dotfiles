@@ -28,7 +28,7 @@ else
   
 fi
 
-if [ -f ~/dotfiles/scripts/git-completion.bash ]; then
-  . ~/dotfiles/scripts/git-completion.bash
-  echo "git-completion.bash loaded"
-fi
+# if [ -f ~/dotfiles/scripts/git-completion.bash ]; then
+#   . ~/dotfiles/scripts/git-completion.bash
+#   echo "git-completion.bash loaded"
+# fi
