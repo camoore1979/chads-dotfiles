@@ -11,8 +11,8 @@ dotfiles_update_config() {
 
     if [ -n "$LINE_NUMBER" ] 
       then
-      echo "sources .bash_aliases on line number $LINE_NUMBER, removing";
-      sed -i -e "$LINE_NUMBER d" $1
+        echo "sources .bash_aliases on line number $LINE_NUMBER, removing";
+        sed -i -e "$LINE_NUMBER d" $1
     else
       echo ".bash_aliases not in $1"
     fi 
@@ -23,10 +23,10 @@ dotfiles_update_config() {
 if [ -f ~/.bash_profile ]
   then
     dotfiles_update_config ~/.bash_profile    
-  elif [ -f ~/.zshrc ]
-    then
-      echo ".bash_profile does NOT exist.... trying for .zshrc"
-      dotfiles_update_config ~/.zshrc
-  else
-    echo "no known profile / config / rc file found. unable to source dotfiles!"
+elif [ -f ~/.zshrc ]
+  then
+    echo ".bash_profile does NOT exist.... trying for .zshrc"
+    dotfiles_update_config ~/.zshrc
+else
+  echo "no known profile / config / rc file found. unable to source dotfiles!"
 fi
