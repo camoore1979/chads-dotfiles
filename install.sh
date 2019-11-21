@@ -11,7 +11,7 @@ dotfiles_update_config() {
 
     if [ -n "$LINE_NUMBER" ] 
       then
-        echo "sources .bash_aliases on line number $LINE_NUMBER, removing";
+             echo "sources .bash_aliases on line number $LINE_NUMBER, removing";
         sed -i -e "$LINE_NUMBER d" $1
     else
       echo ".bash_aliases not in $1"
