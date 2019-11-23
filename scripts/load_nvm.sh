@@ -1,4 +1,6 @@
-#
+#!/bin/bash
+
+## got this from https://stackoverflow.com/questions/47009776/how-to-run-nvm-in-oh-my-zsh
 
 lazynvm() {
   unset -f nvm node npm

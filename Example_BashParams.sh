@@ -9,8 +9,6 @@ if [ $# == 0 ]; then
   exit
 fi
 
-
-
 echo " "
 echo "Parameter \$1: $1"
 echo "Parameter \$2: $2"
