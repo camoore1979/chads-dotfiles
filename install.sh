@@ -11,6 +11,8 @@ elif [ -f ~/.zshrc ]
   then
     echo ".bash_profile does NOT exist.... trying for .zshrc"
     dotfiles_update_config ~/.zshrc
+
+    ./install/zshrc_add_preferred_theme.sh
 else
   echo "no known profile / config / rc file found. unable to source dotfiles!"
 fi
