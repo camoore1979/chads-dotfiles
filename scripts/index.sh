@@ -9,3 +9,5 @@
 . "$PATH_TO_CHADS_DOTFILES/scripts/setup_git_helpers_for_bash.sh"
 . "$PATH_TO_CHADS_DOTFILES/scripts/configure_cl_colors.sh"
 . "$PATH_TO_CHADS_DOTFILES/scripts/load_nvm.sh"
+. "$PATH_TO_CHADS_DOTFILES/scripts/maven.sh"
+. "$PATH_TO_CHADS_DOTFILES/scripts/vscode.sh"

@@ -8,3 +8,4 @@ alias s='source ~/.bash_profile'
 . "$PATH_TO_CHADS_DOTFILES/aliases/linux_cl.sh"
 . "$PATH_TO_CHADS_DOTFILES/aliases/nav.sh"
 . "$PATH_TO_CHADS_DOTFILES/aliases/node.sh"
+. "$PATH_TO_CHADS_DOTFILES/aliases/vscode.sh"

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+alias gonode='launch_node_env'
+
 alias nr='npm run'
 alias nrb='npm run build'
 alias nrd='npm run develop'
