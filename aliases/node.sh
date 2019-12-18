@@ -1,6 +1,6 @@
 #!/bin/bash
 
-alias gonode='launch_node_env'
+alias lne='launch_node_env'
 
 alias nr='npm run'
 alias nrb='npm run build'

@@ -13,3 +13,5 @@ $ cd ./dotfiles
 $ ./install.sh  
 ````
 
+- asdf
+- qwerty

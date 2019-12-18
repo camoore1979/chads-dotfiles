@@ -16,6 +16,9 @@ export PATH_TO_CHADS_DOTFILES
 #PS1="\u@\h:\w\$ "
 #PS1="\[\034[0;32m\]✔\[\033[0;0m\] \[\033[0;33m\]\w\[\033[0;0m\]  $ "
 
+# Load Fun Stuff
+. "$PATH_TO_CHADS_DOTFILES/funstuff/index.sh"
+
 # Load my Scripts
 . "$PATH_TO_CHADS_DOTFILES/scripts/index.sh"
 
@@ -26,3 +29,6 @@ if [ -f ~/.project_aliases ]; then
   source ~/.project_aliases
   echo ".project_aliases loaded.."
 fi
+
+# Call a Fun Stuff
+say_good_morning

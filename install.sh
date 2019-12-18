@@ -16,3 +16,4 @@ elif [ -f ~/.zshrc ]
 else
   echo "no known profile / config / rc file found. unable to source dotfiles!"
 fi
+cd
