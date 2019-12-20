@@ -49,7 +49,7 @@ then
     echo "adding preferred plugins"
     # insert plugins
     NEW_PLUGINS="plugins=(git gitfast vscode)"
-    sed -i -- "s/^plugins=.*/plugins=(git gitfast vscode)/g" $ZSHRC_FILE
+    sed -i -- "s/^plugins=.*/plugins=(docker git gitfast vscode)/g" $ZSHRC_FILE
   else
     echo "preferred plugins already installed!"
   fi
