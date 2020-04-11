@@ -7,5 +7,6 @@ navigate_to_code() {
   else
     echo "$PATH_TO_CHADS_CODE/projects/$1 was not found! Dumping you in $PATH_TO_CHADS_CODE/projects"
     cd $PATH_TO_CHADS_CODE/projects
+    ls -al
   fi
 }

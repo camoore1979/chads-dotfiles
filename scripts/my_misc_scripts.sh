@@ -14,3 +14,7 @@ my_kill_port() {
   lsof -i $1 | grep "(LISTEN)" | cut -c 9-13 | xargs kill
 }
 
+goAndLs() {
+  cd $1
+  ls -al
+}
