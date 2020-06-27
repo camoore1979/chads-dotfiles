@@ -72,3 +72,5 @@ function my_docker_connect_to_container() {
   docker exec -it $1 bash
 }
 alias cdcc='my_docker_connect_to_container'
+
+alias cdcu='docker-compose up'
