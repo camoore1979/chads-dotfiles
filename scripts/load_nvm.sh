@@ -15,22 +15,26 @@ lazynvm() {
   fi
 }
 
-nvm() {
-  lazynvm 
-  nvm $@
-}
-
 node() {
-  lazynvm
   node $@
 }
 
 npm() {
-  lazynvm
   npm $@
 }
 
+nvm() {
+  nvm $@
+}
+
 launch_node_env() {
+  lazynvm
+  returnValue=$?
+  if [ $returnValue -ne 0 ]; then
+    echo "\nHmm... problem with nvm:"
+    echo "  a) nvm needs to be installed; or"
+    echo "  b) you need to set a default node version\n"
+  fi
   node --version
   npm --version
   nvm --version
