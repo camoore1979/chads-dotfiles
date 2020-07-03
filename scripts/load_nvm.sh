@@ -27,14 +27,25 @@ nvm() {
   nvm $@
 }
 
-launch_node_env() {
+run_nvm_use() {
+  nvm use
+  returnValue=$?
+  if [ $returnValue -ne 0 ]; then
+    nvm alias default 12.13.1
+    nvm use default
+  fi
+}
+
+launch_nvm() {
   lazynvm
   returnValue=$?
   if [ $returnValue -ne 0 ]; then
-    echo "\nHmm... problem with nvm:"
-    echo "  a) nvm needs to be installed; or"
-    echo "  b) you need to set a default node version\n"
+    run_nvm_use
   fi
+}
+
+launch_node_env() {
+  launch_nvm
   node --version
   npm --version
   nvm --version
