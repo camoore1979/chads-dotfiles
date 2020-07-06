@@ -10,7 +10,6 @@ alias cdb='docker build .'
 # cdbn - docker build no cache
 alias cdbn='docker build . --no-cache'
 
-
 # cdbt - docker build, pass image name 
 my_docker_build_command() {
   docker build -t $1 .

@@ -2,6 +2,8 @@
 
 ## got this from https://stackoverflow.com/questions/47009776/how-to-run-nvm-in-oh-my-zsh
 
+export LAZY_NVM_LOADED=notyet
+
 lazynvm() {
   unset -f nvm node npm
 
@@ -16,15 +18,28 @@ lazynvm() {
 }
 
 node() {
-  node $@
+  if [ $LAZY_NVM_LOADED = 'notyet' ]; then
+    echo "nvm/npm/node not yet loaded!"
+    exit 1
+  elif; then 
+    node $@
+  fi
 }
 
 npm() {
-  npm $@
+  if [ $LAZY_NVM_LOADED = 'notyet' ]; then
+    echo "nvm/npm/node not yet loaded!"
+  elif; then 
+    npm $@
+  fi
 }
 
 nvm() {
-  nvm $@
+  if [ $LAZY_NVM_LOADED = 'notyet' ]; then
+    echo "nvm/npm/node not yet loaded!"
+  elif; then
+    nvm $@
+  fi
 }
 
 run_nvm_use() {
@@ -49,4 +64,5 @@ launch_node_env() {
   node --version
   npm --version
   nvm --version
+  export LAZY_NVM_LOADED=loaded
 }
