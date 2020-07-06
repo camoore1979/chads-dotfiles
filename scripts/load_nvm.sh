@@ -60,7 +60,9 @@ launch_nvm() {
 }
 
 launch_node_env() {
-  launch_nvm
+  if [ $LAZY_NVM_LOADED = 'notyet' ]; then
+    launch_nvm
+  fi
   node --version
   npm --version
   nvm --version
