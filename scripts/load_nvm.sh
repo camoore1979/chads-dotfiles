@@ -12,6 +12,7 @@ lazynvm() {
 
     export NVM_DIR=~/.nvm
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    echo "nvm/node/npm loaded!"
   else
     echo "nvm is not installed. Should expect a ~/.nvm dir to exist. Unable to load nvm!"
   fi
@@ -46,7 +47,8 @@ run_nvm_use() {
   nvm use
   returnValue=$?
   if [ $returnValue -ne 0 ]; then
-    nvm alias default 12.13.1
+    echo "no .nvmrc file, setting and loading default node."
+    nvm alias default 12.18.3
     nvm use default
   fi
 }
@@ -61,6 +63,7 @@ launch_nvm() {
 
 launch_node_env() {
   if [ $LAZY_NVM_LOADED = 'notyet' ]; then
+    echo "nvm/node/npm not yet loading! Loading..."
     launch_nvm
   fi
   node --version
