@@ -3,6 +3,7 @@
 alias pa='print_my_aliases'
 alias s='source ~/.bash_profile'
 
+. "$PATH_TO_CHADS_DOTFILES/aliases/alias_helpers.sh"
 . "$PATH_TO_CHADS_DOTFILES/aliases/curl.sh"
 . "$PATH_TO_CHADS_DOTFILES/aliases/docker.sh"
 . "$PATH_TO_CHADS_DOTFILES/aliases/git.sh"

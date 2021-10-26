@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # create aliases for common commands
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias lh='ls -hF --color=tty'
-alias ld='ls -d */'
+alias cll='ls -alF'
+alias cla='ls -A'
+alias cl='ls -CF'
+alias clh='ls -hF --color=tty'
+alias cld='ls -d */'
 alias c='clear'
 # alias gh='cd ~'
-alias gr='my_grep_function'
-alias t='my_tail_func'
-alias kport='my_kill_port'
+alias cgr='my_grep_function'
+alias ct='my_tail_func'
+alias ckport='my_kill_port'
 # vim aliases
-alias v='vim'
+alias cv='vim'

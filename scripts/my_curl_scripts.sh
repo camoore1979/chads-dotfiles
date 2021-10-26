@@ -7,16 +7,16 @@
 
 # NOTE: see .bash_aliases for aliases to these functions.
 
-# curlGetTest - curl get helper
+# my_curl_get_test - curl get helper
 #   $1 - URL 
-curlGetTest() {
+my_curl_get_test() {
   curl --silent --show-error $1  > ./test.json
   python -m json.tool ./test.json
   rm ./test.json 
 }
  
-# curlPostLogin - curl post helper for the login route
-curlPostLogin() {
+# my_curl_post_login - curl post helper for the login route
+my_curl_post_login() {
 
   curl --silent --show-error -X POST -H"Content-Type: application/json" -d'{"userId":"chad","password":"test1b"}' "http://localhost:3000/api/login" > ./auth.json
   python -m json.tool ./auth.json
@@ -27,77 +27,77 @@ curlPostLogin() {
   rm ./auth.json
 }
 
-# curlPostTest - curl post helper
+# my_curl_post_test - curl post helper
 #   $1 - data in json file
 #   $2 - URL 
-curlPostTest() {
+my_curl_post_test() {
 
   curl --silent --show-error -X POST -H"Content-Type: application/json" -d$1 $2 > ./test.json
   python -m json.tool ./test.json
   rm ./test.json 
 }
 
-# curlPutTest - curl put helper
+# my_curl_put_test - curl put helper
 #   $1 - data in json file
 #   $2 - URL 
-curlPutTest() {
+my_curl_put_test() {
 
   curl --silent --show-error -X PUT -H"Content-Type: application/json" -d$1 $2 > ./test.json
   python -m json.tool ./test.json
   rm ./test.json 
 }
 
-# curlDeleteTest- curl delete helper
+# my_curl_delete_test- curl delete helper
 #   $1 - URL 
-curlDeleteTest() {
+my_curl_delete_test() {
   curl --silent --show-error -X DELETE $1  > ./test.json
   python -m json.tool ./test.json 
   rm ./test.json 
 }
 
 
-# curlGetTestwAuth - curl get helper requiring an Auth Token
+# my_curl_get_test_auth - curl get helper requiring an Auth Token
 #   $1 - Auth Header
 #   $2 - URL 
-curlGetTestwAuth() {
+my_curl_get_test_auth() {
   curl --silent --show-error -H"$1" $2  > ./test.json
   python -m json.tool ./test.json 
   rm ./test.json 
 }
  
-# curlPostTestwAuth - curl post helper
+# my_curl_post_test_auth - curl post helper
 #   $1 - Auth Header
 #   $2 - data in json file
 #   $3 - URL 
-curlPostTestwAuth() {
+my_curl_post_test_auth() {
 
   curl --silent --show-error -X POST -H"$1" -H"Content-Type: application/json" -d$2 $3 > ./test.json
   python -m json.tool ./test.json
   rm ./test.json 
 }
 
-# curlPutTestwAuth - curl put helper
+# my_curl_put_test_auth - curl put helper
 #   $1 - Auth Header
 #   $2 - data in json file
 #   $3 - URL 
-curlPutTestwAuth() {
+my_curl_put_test_auth() {
 
   curl --silent --show-error -X PUT -H"$1" -H"Content-Type: application/json" -d$2 $3 > ./test.json
   python -m json.tool ./test.json
   rm ./test.json 
 }
 
-# curlDeleteTestwAuth- curl delete helper
+# my_curl_delete_test_auth- curl delete helper
 #   $1 - Auth Header
 #   $2 - URL 
-curlDeleteTestwAuth() {
+my_curl_delete_test_auth() {
   curl --silent --show-error -X DELETE -H"$1" $2  > ./test.json
   python -m json.tool ./test.json 
   rm ./test.json 
 }
 
 
-curlGetWAuth() {
+my_curl_get_token() {
   authHeader="Authorization: Token: "
   authToken=$(cat authToken.txt)
 
@@ -106,7 +106,7 @@ curlGetWAuth() {
   rm test.json
 }
 
-curlPostWAuth() {
+my_curl_post_token() {
   authHeader="Authorization: Token: "
   authToken=$(cat authToken.txt)
 
@@ -116,7 +116,7 @@ curlPostWAuth() {
 
 }
 
-curlPutWAuth() {
+my_curl_put_token() {
   authHeader="Authorization: Token: "
   authToken=$(cat authToken.txt)
 
@@ -125,7 +125,7 @@ curlPutWAuth() {
   rm test.json
 }
 
-curlDeleteWAuth() {
+my_curl_delete_token() {
   authHeader="Authorization: Token: "
   authToken=$(cat authToken.txt)
 

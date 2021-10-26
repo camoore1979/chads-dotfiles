@@ -1,6 +1,6 @@
 
 ## move this later elsewhere
-maven-migrate() {
+my_maven-migrate() {
   docker run -it --rm \
     --name maven-runner \
     -v "$(pwd)":/usr/src/mymaven \

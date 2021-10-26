@@ -1,19 +1,19 @@
 #!/bin/bash
 
 # create aliases for my curl commands
-alias curlG='curlGetTest'
-alias curlP='curlPostTest'
-alias curlPu='curlPutTest'
-alias curlD='curlDeleteTest'
+# alias curlG='my_curl_get_test'
+# alias curlP='my_curl_post_test'
+# alias curlPu='my_curl_put_test'
+# alias curlD='my_curl_delete_test'
 
-alias curlGH='curlGetTestwAuth'
-alias curlPH='curlPostTestwAuth'
-alias curlPuH='curlPutTestwAuth'
-alias curlDH='curlDeleteTestwAuth'
+# alias curlGH='my_curl_get_test_auth'
+# alias curlPH='my_curl_post_test_auth'
+# alias curlPuH='my_curl_put_test_auth'
+# alias curlDH='my_curl_delete_test_auth'
 
-alias getWAuth='curlGetWAuth'
-alias postWAuth='curlPostWAuth'
-alias putWAuth='curlPutWAuth'
-alias deleteWAuth='curlDeleteWAuth'
+# alias getWAuth='my_curl_get_token'
+# alias postWAuth='my_curl_post_token'
+# alias putWAuth='my_curl_put_token'
+# alias deleteWAuth='my_curl_delete_token'
 
-alias loginChad='curlPostLogin'
+# alias loginChad='my_curl_post_login'

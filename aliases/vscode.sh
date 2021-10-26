@@ -1,3 +1,3 @@
 #!/bin/bash
 
-alias goc='launch_code .'
+alias cgoc='my_launch_code .'
