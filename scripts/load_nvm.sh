@@ -63,7 +63,7 @@ launch_nvm() {
 
 launch_node_env() {
   if [ $LAZY_NVM_LOADED = 'notyet' ]; then
-    echo "nvm/node/npm not yet loading! Loading..."
+    echo "nvm/node/npm not yet loaded! Loading..."
     launch_nvm
   fi
   node --version

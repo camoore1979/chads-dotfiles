@@ -32,3 +32,5 @@ fi
 
 # Call a Fun Stuff
 say_good_morning
+
+launch_node_env
