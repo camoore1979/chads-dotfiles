@@ -1,7 +1,12 @@
 #!/bin/bash
 
+source_my_dotfiles() {
+  source "$PATH_TO_CHADS_DOTFILES/.bash_aliases"
+}
+
 alias pa='print_my_aliases'
-alias s='source ~/.bash_profile'
+alias s='source_my_dotfiles'
+
 
 . "$PATH_TO_CHADS_DOTFILES/aliases/alias_helpers.sh"
 . "$PATH_TO_CHADS_DOTFILES/aliases/curl.sh"

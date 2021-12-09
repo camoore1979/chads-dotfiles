@@ -14,3 +14,5 @@ alias cgbr='git branch -l | cat'
 alias cgg='my_git_graph'
 alias cgitp='my_git_pretty'
 alias cgg2='my_git_graph2'
+
+alias cgfco='my_git_fetch_and_checkout'

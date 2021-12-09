@@ -1,6 +1,16 @@
 #!/bin/bash
 #Chad A. Moore
 
+my_git_fetch_and_checkout() {
+  git fetch
+
+  if [ -z "$1" ]; then
+    echo "No branch supplied."
+  else
+    git checkout $1  
+  fi
+}
+
 my_long_git_stat_func() {
   git status > git.status.txt
   less git.status.txt
