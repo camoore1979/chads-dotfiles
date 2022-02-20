@@ -17,4 +17,4 @@ my_analyze_code_files() {
     echo "Memory: $TOTAL_MEMORY bytes ($MEMORY_KB KB)";
 }
 
-alias cacf='my_my_analyze_code_files'
+alias cacf='my_analyze_code_files'

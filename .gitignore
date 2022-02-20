@@ -5,3 +5,8 @@
 #ignore these files
 git.status.txt
 /.idea
+
+*.csv
+*.tmp
+*.transformed
+!scripts/iucu_data_parser/iucu-transaction-examples.csv
