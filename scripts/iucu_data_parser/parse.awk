@@ -19,7 +19,7 @@ BEGIN {
   COLUMN_DESCRIPTION = 13;
   COLUMN_MEMO = 14;
   count = 1;
-  print "Date", "Num", "Transaction", "Notes", "Code", "R", "Deposit", "Outgoing";
+  print "Date", "Num", "Transaction", "Notes", " ", "Code", "R", "Deposit", "Outgoing", "Actual", "Reconciled", "Category", "Description", "Memo";
 }
 {
   theDate = $2;
@@ -33,6 +33,7 @@ BEGIN {
   code = "";
   category = "";
 
+  # DETERMINE CODE, TRANSACTION, and NOTES
   if (index(description,"Withdrawal") > 0) {
     # transaction = substr(description,index(description,"Withdrawal")+11);
     if (index(description,"Withdrawal Home Banking") > 0) {
@@ -52,12 +53,12 @@ BEGIN {
       notes = substr(memo,index(memo, "Card"), 13);
     } else {
       code = "W";
-      transaction = substr(description,10);
+      transaction = substr(description,12);
       notes = substr(memo,index(memo, "Card"), 13);
     }
   } else if (index(description,"Draft") > 0) {
     code = "CH";
-    transaction = substr(description,index(description,"Draft")+6);
+    transaction = description;
   } else if (index(description,"Deposit") > 0) {
 
     if (index(description,"Deposit by Check") > 0) {
@@ -75,11 +76,12 @@ BEGIN {
       transaction = description;
       notes = memo;
     }
-  } else if (index(description,"Transfer Fee") > 0) {
+  } else if (index(description,"Transfer fee") > 0) {
     code = "FEE";
     transaction = description;
   }
 
+  # DETERMINE CATEGORY
   if (index(description, "ALLSTATE") > 0) {
     category = "auto insurance";
   } else if (index(description, "Withdrawal CAPITOL ONE") > 0) {
@@ -90,6 +92,12 @@ BEGIN {
     category = "polaris";
   } else if (index(description, "KROGER") > 0) {
     category = "groceries";
+  } else if (index(description, "MIDLAND NATIONAL") > 0) {
+    category = "life insurance";
+  } else if (index(description, "Transfer to Loan 0003") > 0) {
+    category = "ford escape";
+  } else if (index(description, "Transfer to Loan 0004") > 0) {
+    category = "toyota yaris";
   }
 
   if (index(memo, "AUDIBLE") > 0) {
@@ -106,8 +114,10 @@ BEGIN {
     category = "technology";
   } else if (index(memo, "PRIME VIDEO") > 0) {
     category = "recreation";
-  } else if (index(memo, "SPOTIRY") > 0) {
+  } else if (index(memo, "SPOTIFY") > 0) {
     category = "entertainment (recurring)";
+  } else if (index(memo, "Transfer to Share") > 0) {
+    category = "regular savings";
   }
 
   transactions[count, COLUMN_DATE] = theDate;
