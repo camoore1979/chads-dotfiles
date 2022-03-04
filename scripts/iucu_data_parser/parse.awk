@@ -156,27 +156,3 @@ END {
 
   }
 }
-
-
-
-
-
-
-  # if (index(transaction,"Transfer To Share") > 0 || index(transaction,"From Share") > 0) {
-  #   code = "T";
-  # }
-  # if (index(transaction,"DEBIT TRAN") > 0) {
-  #   transaction = substr(transaction,index(transaction,"DEBIT TRAN")+11);
-  #   memo1 = substr(memo,1,index(memo, "Date")-1);
-  #   memo2 = substr(memo,index(memo, "Card"), length(memo));
-  #   transaction = memo1 " " memo2;
-  #   notes = memo2;
-  # } else {
-  #   transaction = transaction " " memo;
-  # }
-  # if (index(transaction,"Home Banking") > 0) {
-  #   transaction = substr(transaction,index(transaction,"Home Banking")+13);
-  # }
-  # if (index(transaction,"Internet Access") > 0) {
-  #   transaction = substr(transaction,1, index(transaction,"Internet Access")-1);
-  # }
