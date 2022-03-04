@@ -10,7 +10,6 @@ alias cgl='my_long_git_stat_func'
 # branch management
 alias cgbr='git branch -l | cat'
 
-# cgit log aliases
 alias cgg='my_git_graph'
 alias cgitp='my_git_pretty'
 alias cgg2='my_git_graph2'

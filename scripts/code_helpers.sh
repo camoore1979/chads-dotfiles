@@ -17,4 +17,47 @@ my_analyze_code_files() {
     echo "Memory: $TOTAL_MEMORY bytes ($MEMORY_KB KB)";
 }
 
-alias cacf='my_my_analyze_code_files'
+alias cacf='my_analyze_code_files'
+
+
+fetch_pull_install() {
+  git fetch
+
+  if [ -z "$1" ]; then
+    echo "No branch supplied."
+  else
+    git checkout $1  
+  fi
+
+  git pull
+
+  nvm use
+
+  npm install
+
+}
+
+alias cfpi='fetch_pull_install'
+
+
+fetch_pull_install_lint_test() {
+  git fetch
+
+  if [ -z "$1" ]; then
+    echo "No branch supplied."
+  else
+    git checkout $1  
+  fi
+
+  git pull
+
+  nvm use
+
+  npm install
+  
+  npm run lint
+
+  npm run test
+}
+
+alias cfpilt='fetch_pull_install_lint_test'

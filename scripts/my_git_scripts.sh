@@ -1,5 +1,4 @@
 #!/bin/bash
-#Chad A. Moore
 
 my_git_fetch_and_checkout() {
   git fetch
