@@ -70,7 +70,7 @@ BEGIN {
     } else if (index(description,"Deposit Home Banking Transfer") > 0) {
       code = "T";
       transaction = description;
-      notes = substr(memo,index(memo, "Card"), 13);
+      notes = substr(memo,1, index(memo, "Internet")-2);
     } else {
       code = "D";
       transaction = description;
