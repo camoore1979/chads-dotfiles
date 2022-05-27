@@ -7,7 +7,6 @@ nvm_use_and_npm_install() {
   npm i
 }
 
-
 alias cnr='npm run'
 alias cnrb='npm run build'
 alias cnrd='npm run develop'
