@@ -90,27 +90,39 @@ BEGIN {
     category = "catalent";
   } else if (index(description, "Deposit POLARIS") > 0) {
     category = "polaris";
-  } else if (index(description, "KROGER") > 0) {
+  } else if (index(description, "KROGER #2") > 0) {
+    category = "auto oil & gas";
+  } else if (index(description, "KROGER #9") > 0) {
     category = "groceries";
   } else if (index(description, "MIDLAND NATIONAL") > 0) {
     category = "life insurance";
+  } else if (index(description, "SAMS CLUB") > 0) {
+    category = "groceries";
   } else if (index(description, "Transfer to Loan 0003") > 0) {
     category = "ford escape";
   } else if (index(description, "Transfer to Loan 0004") > 0) {
     category = "toyota yaris";
   }
 
+  
+
   if (index(memo, "AUDIBLE") > 0) {
     category = "books/periodicals";
   } else if (index(memo, "CRU-DONATIONS") > 0) {
     category = "cru";
+  } else if (index(description, "DAVIS VENDING") > 0) {
+    category = "tonya spending";
   } else if (index(memo, "DISNEYPLUS") > 0) {
     category = "entertainment (recurring)";
   } else if (index(memo, "HBOMAX") > 0) {
     category = "entertainment (recurring)";
   } else if (index(memo, "INTERVARSITY") > 0) {
     category = "intervarsity";
+  } else if (index(memo, "JOURNAL") > 0) {
+    category = "books/periodicals";
   } else if (index(memo, "MSBILL.INFO") > 0) {
+    category = "technology";
+  } else if (index(memo, "Microsoft Live") > 0) {
     category = "technology";
   } else if (index(memo, "PRIME VIDEO") > 0) {
     category = "recreation";
