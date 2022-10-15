@@ -21,8 +21,6 @@ const records = parseCsv(content, {
   skip_empty_lines: true
 });
 
-// echo();
-// const headers = JSON.stringify(Object.keys(records[0]), null, 2);
 const headers = ['Date', 'Num', 'Transation', 'Notes', 'Code', 'R', 'Deposit', 'Outgoing', 'Actual Balance', 'Reconciled Balance', 'Category'];
 const rows = records.map(transformRecords);
 const data = stringify([headers, ...rows]);

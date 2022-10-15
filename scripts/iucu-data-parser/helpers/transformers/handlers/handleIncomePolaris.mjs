@@ -1,6 +1,6 @@
-import { CODE_DEPOSIT, polaris } from '../../constants.mjs';
+import { CODE_DEPOSIT, CATEGORY_POLARIS } from '../../constants.mjs';
 import { performTransformation } from '../performTransformation.mjs';
 
-export const handleIncomePolaris = ({ description }) => performTransformation([description], polaris, {
-  category: polaris, code: CODE_DEPOSIT, notes: 'Chad\'s paycheck', transaction: 'Paycheck: POLARIS Laboratories, Inc.'
+export const handleIncomePolaris = ({ description }) => performTransformation([description], CATEGORY_POLARIS, {
+  category: CATEGORY_POLARIS, code: CODE_DEPOSIT, notes: 'Chad\'s paycheck', transaction: 'Paycheck: CATEGORY_POLARIS Laboratories, Inc.'
 });
