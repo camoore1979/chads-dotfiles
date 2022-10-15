@@ -25,12 +25,12 @@ export PATH_TO_CHADS_DOTFILES
 # Load Aliases
 . "$PATH_TO_CHADS_DOTFILES/aliases/index.sh"
 
+echo "chads-dotfiles loaded."
+
 if [ -f ~/.project_aliases ]; then
   source ~/.project_aliases
-  echo ".project_aliases loaded.."
+  echo ".project_aliases loaded."
 fi
 
 # Call a Fun Stuff
 say_good_morning
-
-## my_launch_node_env

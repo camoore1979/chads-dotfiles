@@ -13,3 +13,5 @@ function my_print_my_alias {
   alias | grep "^c"
 }
 alias claa='my_print_my_alias'
+
+alias c='clear'
