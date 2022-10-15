@@ -13,6 +13,10 @@ module.exports = {
     'ecmaVersion': 'latest',
     'sourceType': 'module'
   },
+  'plugins': [
+    'sort-imports-requires',
+    'sort-keys-fix'
+  ],
   'root': true,
   'rules': {
     'array-bracket-spacing': ['error', 'never'],
@@ -33,6 +37,9 @@ module.exports = {
     'semi': [
       'error',
       'always'
-    ]
+    ],
+    'sort-imports-requires/sort-imports': ['error', { unsafeAutofix: true }],
+    'sort-imports-requires/sort-requires': ['error', { unsafeAutofix: true }],
+    'sort-keys-fix/sort-keys-fix': 'error'
   }
 };

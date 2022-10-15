@@ -1,4 +1,4 @@
-import { getCategory } from './transformers/getCategory.mjs';
+import { handleTransformations } from './transformers/handleTransformations.mjs';
 
 export const transformRecords = (transactionRecord) => {
 
@@ -14,18 +14,18 @@ export const transformRecords = (transactionRecord) => {
   } = transactionRecord;
 
   const dateFormatted = date;
-  const transaction = description;
-  const notes = '';
-  const code = '';
+  // const transaction = description;
+  // const notes = '';
+  // const code = '';
   const reconciled = 'R';
   const amountDeposited = Math.abs(amountCredit);
   const amountOutgoing = Math.abs(amountDebit);
-  const category = getCategory(transactionRecord);
+  const { code, transaction, notes, category } = handleTransformations(transactionRecord) || {};
 
   return [
     dateFormatted,    // date
     checkNumber,      // check number
-    transaction,      // transaction
+    transaction || description,      // transaction
     notes,            // notes
     code,             // code
     reconciled,       // reconciled
@@ -34,6 +34,6 @@ export const transformRecords = (transactionRecord) => {
     '',               // actual balance
     '',               // reconciled balance
     category,
-    `transaction: ${transaction} ^|^ description: ${description} ^|^ memo: ${memo}`
+    `description: ${description} ^|^ memo: ${memo}`
   ];
 };

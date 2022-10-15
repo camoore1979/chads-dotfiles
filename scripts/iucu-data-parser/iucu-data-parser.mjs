@@ -1,17 +1,15 @@
 #!/usr/bin/env zx
 
-import { parse } from 'path';
 import { readFileSync, writeFileSync } from 'fs';
+import _ from 'lodash';
 import { parse as parseCsv } from 'csv-parse/sync';
 import { stringify } from 'csv-stringify/sync';
-import _ from 'lodash';
 import { transformRecords } from './helpers/transformRecords.mjs';
 
 echo`iucu-data-parser`;
 
 const inputFile = process.argv[3];
-const { name: fileName } = parse(inputFile);
-const outputFile = `${fileName}.transformed.csv`;
+const outputFile = process.argv[4];
 
 echo`Parsing file: ${inputFile}`;
 
