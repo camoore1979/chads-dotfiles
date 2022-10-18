@@ -14,13 +14,14 @@ module.exports = {
     'sourceType': 'module'
   },
   'plugins': [
+    'sort-destructure-keys',
     'sort-imports-requires',
     'sort-keys-fix'
   ],
   'root': true,
   'rules': {
     'array-bracket-spacing': ['error', 'never'],
-    'comma-spacing': ['error', { 'before': false, 'after': true }],
+    'comma-spacing': ['error', { 'after': true, 'before': false }],
     'indent': [
       'error',
       2
@@ -38,6 +39,7 @@ module.exports = {
       'error',
       'always'
     ],
+    'sort-destructure-keys/sort-destructure-keys': 2,
     'sort-imports-requires/sort-imports': ['error', { unsafeAutofix: true }],
     'sort-imports-requires/sort-requires': ['error', { unsafeAutofix: true }],
     'sort-keys-fix/sort-keys-fix': 'error'

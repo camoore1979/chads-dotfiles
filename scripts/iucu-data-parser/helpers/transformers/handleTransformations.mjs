@@ -1,11 +1,9 @@
-import { handleIncomeCatalent } from './handlers/handleIncomeCatalent.mjs';
-import { handleIncomePolaris } from './handlers/handleIncomePolaris.mjs';
-import { handleOutgoingPeriodicals } from './handlers/handleOutgoingPeriodicals.mjs';
+import { incomeHandlers } from './handlers/incomeHandlers.mjs';
+import { outgoingHandlers } from './handlers/outgoingHandlers.mjs';
 
 const transformHandlers = [
-  handleIncomeCatalent,
-  handleIncomePolaris,
-  handleOutgoingPeriodicals
+  ...outgoingHandlers,
+  ...incomeHandlers,
 ];
 
 export const handleTransformations = (transactionRecord) => {

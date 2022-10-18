@@ -1,39 +1,34 @@
+import { getBankTransactionDescription } from './transformers/getBankTransactionDescription.mjs';
 import { handleTransformations } from './transformers/handleTransformations.mjs';
 
 export const transformRecords = (transactionRecord) => {
 
   const {
-    // transactionNumber,
+    amountCredit,
+    amountDebit,
+    checkNumber,
     date,
     description,
-    memo,
-    amountDebit,
-    amountCredit,
-    checkNumber,
-    // fees
+    memo
   } = transactionRecord;
 
+  const bankTransactionDescription = getBankTransactionDescription(description, memo);
   const dateFormatted = date;
-  // const transaction = description;
-  // const notes = '';
-  // const code = '';
   const reconciled = 'R';
   const amountDeposited = Math.abs(amountCredit);
   const amountOutgoing = Math.abs(amountDebit);
-  const { code, transaction, notes, category } = handleTransformations(transactionRecord) || {};
+  const { category, code, notes, transaction } = handleTransformations(transactionRecord) || {};
 
   return [
     dateFormatted,    // date
+    category,         // category
     checkNumber,      // check number
-    transaction || description,      // transaction
-    notes,            // notes
+    transaction || bankTransactionDescription,      // transaction
+    notes,      // bank memo
+    `${description} (${memo})`,             // bank description
     code,             // code
     reconciled,       // reconciled
     amountDeposited,  // deposit
-    amountOutgoing,   // outgoing
-    '',               // actual balance
-    '',               // reconciled balance
-    category,
-    `description: ${description} ^|^ memo: ${memo}`
+    amountOutgoing    // outgoing
   ];
 };

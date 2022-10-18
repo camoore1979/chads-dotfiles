@@ -21,8 +21,8 @@ const records = parseCsv(content, {
   skip_empty_lines: true
 });
 
-const headers = ['Date', 'Num', 'Transation', 'Notes', 'Code', 'R', 'Deposit', 'Outgoing', 'Actual Balance', 'Reconciled Balance', 'Category'];
-const rows = records.map(transformRecords);
+const headers = ['Date', 'Category', 'Num', 'Transaction', 'Notes', 'Details', 'R', 'Deposit', 'Outgoing'];
+const rows = records.map(transformRecords).reverse();
 const data = stringify([headers, ...rows]);
 
 echo`Writing to file: ${outputFile}`;
