@@ -11,6 +11,7 @@ export const CATEGORY_GIVING_INTERVARSITY = 'intervarsity';
 
 export const CATEGORY_SAVINGS_REGULAR = 'regular savings';
 export const CATEGORY_SAVINGS_EMERGENCY = 'emergency fund';
+export const CATEGORY_SAVINGS_CHRISTMAS = 'christmas';
 
 export const CATEGORY_DEBT_AMERICAN_EXPRESS = 'american express';
 export const CATEGORY_DEBT_IUCU_MASTERCARD = 'iucu mastercard';
@@ -50,5 +51,7 @@ export const CODE_CHECK = 'CH';
 export const CODE_DEPOSIT = 'D';
 
 export const CODE_DEBIT_CARD = 'DC';
+
+export const CODE_TRANSFER = 'T';
 
 export const CODE_WITHDRAWAL = 'W';
