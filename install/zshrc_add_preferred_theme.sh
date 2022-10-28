@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./helpers/sed_helpers.sh
+source ./scripts/sed_helpers.sh
 
 # # see https://github.com/ohmyzsh/ohmyzsh/wiki/themes#bureau
 # ZSH_THEME="bureau"  

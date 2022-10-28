@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # LOAD ALL DOTFILE SCRIPTS
-. "$PATH_TO_CHADS_DOTFILES/scripts/iucu_data_parser/iucu_data_parser.sh"
+# . "$PATH_TO_CHADS_DOTFILES/scripts/iucu-data-parser/index.sh"
 . "$PATH_TO_CHADS_DOTFILES/scripts/code_helpers.sh"
 . "$PATH_TO_CHADS_DOTFILES/scripts/configure_cl_colors.sh"
 . "$PATH_TO_CHADS_DOTFILES/scripts/load_nvm.sh"
