@@ -2,6 +2,11 @@
 
 # create the .bash_aliases file from a template
 ./create_bash_aliases.sh
+
+cd ./scripts/iucu-data-parser
+. ./install.sh
+cd ../../
+
 source ./install/install_funcs.sh
 
 if [ -f ~/.bash_profile ]
@@ -16,4 +21,5 @@ elif [ -f ~/.zshrc ]
 else
   echo "no known profile / config / rc file found. unable to source dotfiles!"
 fi
+
 cd
