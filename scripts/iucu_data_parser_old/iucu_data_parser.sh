@@ -20,4 +20,4 @@ function parse_iucu_exported_csv_data {
 
 }
 
-alias cparseiucu='parse_iucu_exported_csv_data';
+# alias cparseiucu='parse_iucu_exported_csv_data';
