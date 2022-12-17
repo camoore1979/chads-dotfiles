@@ -1,0 +1,23 @@
+{
+  "name": "iucu-data-parser",
+  "version": "1.0.0",
+  "description": "Chad's command line utility for parsing CSV files from IU Credit Union",
+  "main": "iucu-data-parser.mjs",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chad Allen Moore",
+  "license": "Unlicensed",
+  "dependencies": {
+    "csv": "^6.2.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-plugin-sort-destructure-keys": "^1.4.0",
+    "eslint-plugin-sort-imports-requires": "^1.0.2",
+    "eslint-plugin-sort-keys-fix": "^1.1.2"
+  }
+}
