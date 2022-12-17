@@ -6,6 +6,9 @@
 cd ./scripts/iucu-data-parser
 . ./install.sh
 cd ../../
+cd ./scripts/google-survey-parser
+. ./install.sh
+cd ../../
 
 source ./install/install_funcs.sh
 

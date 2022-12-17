@@ -12,7 +12,7 @@ function iucu-data-parser {
 
   # source & use nvm
   . ~/.nvm/nvm.sh
-  nvm use
+  nvm use 16.17.1
 
 # parse the trimmed file & generate new csv file
   zx $PATH_TO_CHADS_DOTFILES/scripts/iucu-data-parser/iucu-data-parser.mjs $tmpFile  "./$outputFile"

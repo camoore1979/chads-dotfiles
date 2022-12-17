@@ -21,7 +21,15 @@ const records = parseCsv(content, {
   skip_empty_lines: true
 });
 
-const headers = ['Date', 'Category', 'Num', 'Transaction', 'Notes', 'Details', 'R', 'Deposit', 'Outgoing'];
+const headers = ['Date',
+  'Category',
+  'Num',
+  'Transaction',
+  'Notes',
+  'Details',
+  'R',
+  'Deposit',
+  'Outgoing'];
 const rows = records.map(transformRecords).reverse();
 const data = stringify([headers, ...rows]);
 
