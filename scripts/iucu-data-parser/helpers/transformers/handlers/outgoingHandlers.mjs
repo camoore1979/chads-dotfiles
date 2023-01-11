@@ -36,6 +36,8 @@ const handleDebt = ({ description, memo }) => performTransformation([description
     category: CATEGORY_DEBT_AMERICAN_EXPRESS, code: CODE_AUTOPAY, transaction: 'American Express payment'
   });
 
+const handleAutoGas = ({ description, memo }) => performTransformation([description, memo], ['Kroger #2', 'GETGO'], { category: CATEGORY_GROCERIES, code: CODE_DEBIT_CARD });
+
 const handleGroceries = ({ description, memo }) => performTransformation([description, memo], ['Kroger',
   'samsclub',
   'dollar ge'], { category: CATEGORY_GROCERIES, code: CODE_DEBIT_CARD });
@@ -104,6 +106,7 @@ const technologyList = [
 const handleTechnology = ({ description, memo }) => performTransformation([description, memo], technologyList, { category: CATEGORY_TECHNOLOGY, code: CODE_AUTOPAY });
 
 export const outgoingHandlers = [
+  handleAutoGas,
   handleBooksPeriodicals,
   handleDebt,
   handleChadSpending,

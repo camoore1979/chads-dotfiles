@@ -2,8 +2,7 @@ import { incomeHandlers } from './handlers/incomeHandlers.mjs';
 import { outgoingHandlers } from './handlers/outgoingHandlers.mjs';
 
 const transformHandlers = [
-  ...outgoingHandlers,
-  ...incomeHandlers,
+  ...outgoingHandlers, ...incomeHandlers,
 ];
 
 export const handleTransformations = (transactionRecord) => {
