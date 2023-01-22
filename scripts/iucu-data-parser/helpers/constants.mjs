@@ -5,9 +5,8 @@ export const CATEGORY_INCOME_KIDS_CHIP_IN = 'kids chip-in';
 export const CATEGORY_INCOME_MISC = 'misc income';
 export const CATEGORY_INCOME_PULL_FROM_SAVINGS = 'pull from savings';
 
-export const CATEGORY_GIVING_CRU = 'cru';
 export const CATEGORY_GIVING_REDEEMER = 'redeemer';
-export const CATEGORY_GIVING_INTERVARSITY = 'intervarsity';
+export const CATEGORY_GIVING_CAMPUS_MINISTRY = 'campus ministry';
 
 export const CATEGORY_SAVINGS_REGULAR = 'regular savings';
 export const CATEGORY_SAVINGS_EMERGENCY = 'emergency fund';
@@ -16,7 +15,7 @@ export const CATEGORY_SAVINGS_CHRISTMAS = 'christmas';
 export const CATEGORY_DEBT_AMERICAN_EXPRESS = 'american express';
 export const CATEGORY_DEBT_IUCU_MASTERCARD = 'iucu mastercard';
 export const CATEGORY_DEBT_ONB_LOAN = 'ONB loan';
-export const CATEGORY_DEBT_MITSUBISHI = 'mitsubishi';
+export const CATEGORY_DEBT_CARS = 'car loans';
 export const CATEGORY_DEBT_MORTGAGE = 'mortgage';
 
 export const CATEGORY_GROCERIES = 'groceries';
@@ -29,7 +28,7 @@ export const CATEGORY_ELECTRICITY = 'electricity';
 export const CATEGORY_WATER = 'water';
 export const CATEGORY_INTERNET_PHONE = 'phone';
 export const CATEGORY_MOBILE_PHONE = 'mobile phone';
-export const CATEGORY_FUEL = 'auto oil & gas';
+export const CATEGORY_CAR_FUEL = 'auto oil & gas';
 export const CATEGORY_CAR_MAINTENANCE = 'car stuff';
 export const CATEGORY_INSURANCE_AUTO = 'auto insurance';
 export const CATEGORY_INSURANCE_LIFE = 'life insurance';

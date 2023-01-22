@@ -1,13 +1,13 @@
 import {
-  CATEGORY_BOOKS_PERIODICALS, CATEGORY_CHAD_SPENDING, CATEGORY_DEBT_AMERICAN_EXPRESS, CATEGORY_DEBT_MITSUBISHI, CATEGORY_DEBT_MORTGAGE, CATEGORY_DEBT_ONB_LOAN, CATEGORY_ELECTRICITY, CATEGORY_ENTERTAINMENT, CATEGORY_GIVING_CRU, CATEGORY_GIVING_INTERVARSITY, CATEGORY_GROCERIES, CATEGORY_GYM, CATEGORY_INSURANCE_AUTO, CATEGORY_INSURANCE_LIFE, CATEGORY_INTERNET_PHONE, CATEGORY_RECREATION, CATEGORY_RESTAURANTS, CATEGORY_SAVINGS_CHRISTMAS, CATEGORY_SAVINGS_EMERGENCY, CATEGORY_SAVINGS_REGULAR, CATEGORY_TECHNOLOGY, CATEGORY_TONYA_SPENDING, CODE_AUTOPAY, CODE_DEBIT_CARD, CODE_TRANSFER, CODE_WITHDRAWAL
+  CATEGORY_BOOKS_PERIODICALS, CATEGORY_CHAD_SPENDING, CATEGORY_DEBT_AMERICAN_EXPRESS, CATEGORY_DEBT_CARS, CATEGORY_DEBT_MORTGAGE, CATEGORY_DEBT_ONB_LOAN, CATEGORY_ELECTRICITY, CATEGORY_ENTERTAINMENT, CATEGORY_GIVING_CAMPUS_MINISTRY, CATEGORY_GIVING_CAMPUS_MINISTRY, CATEGORY_GROCERIES, CATEGORY_GYM, CATEGORY_INSURANCE_AUTO, CATEGORY_INSURANCE_LIFE, CATEGORY_INTERNET_PHONE, CATEGORY_RECREATION, CATEGORY_RESTAURANTS, CATEGORY_SAVINGS_CHRISTMAS, CATEGORY_SAVINGS_EMERGENCY, CATEGORY_SAVINGS_REGULAR, CATEGORY_TECHNOLOGY, CATEGORY_TONYA_SPENDING, CODE_AUTOPAY, CODE_DEBIT_CARD, CODE_TRANSFER, CODE_WITHDRAWAL
 } from '../../constants.mjs';
 import { performTransformation } from '../performTransformation.mjs';
 
 const handleGiving = ({ description, memo }) => performTransformation([description, memo], 'cru-donation', {
-  category: CATEGORY_GIVING_CRU, code: CODE_AUTOPAY, transaction: 'Cru Donation'
+  category: CATEGORY_GIVING_CAMPUS_MINISTRY, code: CODE_AUTOPAY, transaction: 'Cru Donation'
 }) ||
   performTransformation([description, memo], 'intervarsity', {
-    category: CATEGORY_GIVING_INTERVARSITY, code: CODE_AUTOPAY, transaction: 'InterVarsity Donation'
+    category: CATEGORY_GIVING_CAMPUS_MINISTRY, code: CODE_AUTOPAY, transaction: 'InterVarsity Donation'
   });
 
 const handleSavings = ({ description, memo }) => performTransformation([description, memo], 'Withdrawal CAPITAL ONE', {
@@ -30,13 +30,13 @@ const handleDebt = ({ description, memo }) => performTransformation([description
     category: CATEGORY_DEBT_ONB_LOAN, code: CODE_AUTOPAY, transaction: 'Old National Bank (personal loan)'
   }) ||
   performTransformation([description, memo], 'Transfer to Loan 0006', {
-    category: CATEGORY_DEBT_MITSUBISHI, code: CODE_AUTOPAY, transaction: 'Transfer to Loan 0006 (Mitsubishi Lancer)'
+    category: CATEGORY_DEBT_CARS, code: CODE_AUTOPAY, transaction: 'Transfer to Loan 0006 (Mitsubishi Lancer)'
   }) ||
   performTransformation([description, memo], 'amex epayment', {
     category: CATEGORY_DEBT_AMERICAN_EXPRESS, code: CODE_AUTOPAY, transaction: 'American Express payment'
   });
 
-const handleAutoGas = ({ description, memo }) => performTransformation([description, memo], ['Kroger #2', 'GETGO'], { category: CATEGORY_GROCERIES, code: CODE_DEBIT_CARD });
+const handleAutoGas = ({ description, memo }) => performTransformation([description, memo], ['Kroger #2', 'GETGO'], { category: CATEGORY_GAS, code: CODE_DEBIT_CARD });
 
 const handleGroceries = ({ description, memo }) => performTransformation([description, memo], ['Kroger',
   'samsclub',
