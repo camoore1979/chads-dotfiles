@@ -3,6 +3,7 @@
 # create aliases for common commands
 alias cll='ls -alF'
 alias cla='ls -A'
+alias cls='ls -al'
 alias cl='ls -CF'
 alias clh='ls -hF --color=tty'
 alias cld='ls -d */'
