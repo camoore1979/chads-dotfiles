@@ -1,5 +1,5 @@
 import {
-  CATEGORY_BOOKS_PERIODICALS, CATEGORY_CHAD_SPENDING, CATEGORY_DEBT_AMERICAN_EXPRESS, CATEGORY_DEBT_CARS, CATEGORY_DEBT_MORTGAGE, CATEGORY_DEBT_ONB_LOAN, CATEGORY_ELECTRICITY, CATEGORY_ENTERTAINMENT, CATEGORY_GAS, CATEGORY_GIVING_CAMPUS_MINISTRY, CATEGORY_GROCERIES, CATEGORY_GYM, CATEGORY_INSURANCE_AUTO, CATEGORY_INSURANCE_LIFE, CATEGORY_INTERNET_PHONE, CATEGORY_RECREATION, CATEGORY_RESTAURANTS, CATEGORY_SAVINGS_CHRISTMAS, CATEGORY_SAVINGS_EMERGENCY, CATEGORY_SAVINGS_REGULAR, CATEGORY_TECHNOLOGY, CATEGORY_TONYA_SPENDING, CODE_AUTOPAY, CODE_DEBIT_CARD, CODE_TRANSFER, CODE_WITHDRAWAL
+  CATEGORY_BOOKS_PERIODICALS, CATEGORY_CAR_FUEL, CATEGORY_CHAD_SPENDING, CATEGORY_DEBT_AMERICAN_EXPRESS, CATEGORY_DEBT_CARS, CATEGORY_DEBT_MORTGAGE, CATEGORY_DEBT_ONB_LOAN, CATEGORY_ELECTRICITY, CATEGORY_ENTERTAINMENT, CATEGORY_GIVING_CAMPUS_MINISTRY, CATEGORY_GROCERIES, CATEGORY_GYM, CATEGORY_INSURANCE_AUTO, CATEGORY_INSURANCE_LIFE, CATEGORY_INTERNET, CATEGORY_RECREATION, CATEGORY_RESTAURANTS, CATEGORY_SAVINGS_CHRISTMAS, CATEGORY_SAVINGS_EMERGENCY, CATEGORY_SAVINGS_REGULAR, CATEGORY_TECHNOLOGY, CATEGORY_TONYA_SPENDING, CODE_AUTOPAY, CODE_DEBIT_CARD, CODE_TRANSFER, CODE_WITHDRAWAL
 } from '../../constants.mjs';
 import { performTransformation } from '../performTransformation.mjs';
 
@@ -39,7 +39,7 @@ const handleDebt = ({ description, memo }) => performTransformation([description
     category: CATEGORY_DEBT_AMERICAN_EXPRESS, code: CODE_AUTOPAY, transaction: 'American Express payment'
   });
 
-const handleAutoGas = ({ description, memo }) => performTransformation([description, memo], ['Kroger #2', 'GETGO'], { category: CATEGORY_GAS, code: CODE_DEBIT_CARD });
+const handleAutoGas = ({ description, memo }) => performTransformation([description, memo], ['Kroger #2', 'GETGO'], { category: CATEGORY_CAR_FUEL, code: CODE_DEBIT_CARD });
 
 const handleGroceries = ({ description, memo }) => performTransformation([description, memo], ['Kroger',
   'samsclub',
@@ -71,7 +71,7 @@ const handleEntertainment = ({ description, memo }) => performTransformation([de
 const handleUtilities = ({ description, memo }) => performTransformation([description, memo], 'dukeenergy', {
   category: CATEGORY_ELECTRICITY, code: CODE_AUTOPAY, transaction: 'Duke Energy Electric Bill'
 }) || performTransformation([description, memo], 'smithvilletelephonecom', {
-  category: CATEGORY_INTERNET_PHONE, code: CODE_AUTOPAY, transaction: 'Smithville Telephone Bill'
+  category: CATEGORY_INTERNET, code: CODE_AUTOPAY, transaction: 'Smithville Telephone Bill'
 });
 
 const handleRecreation = ({ description, memo }) => performTransformation([description, memo], 'Prime Video', {

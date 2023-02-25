@@ -1,5 +1,5 @@
 // CATEGORIES for budget
-export const CATEGORY_INCOME_CATALENT = 'catalent';
+export const CATEGORY_INCOME_TONYA = 'tonya';
 export const CATEGORY_INCOME_POLARIS = 'polaris';
 export const CATEGORY_INCOME_KIDS_CHIP_IN = 'kids chip-in';
 export const CATEGORY_INCOME_MISC = 'misc income';
@@ -26,9 +26,9 @@ export const CATEGORY_RESTAURANTS = 'restaurants';
 export const CATEGORY_HOUSE_YARD = 'house/yard';
 export const CATEGORY_ELECTRICITY = 'electricity';
 export const CATEGORY_WATER = 'water';
-export const CATEGORY_INTERNET_PHONE = 'phone';
+export const CATEGORY_INTERNET = 'internet';
 export const CATEGORY_MOBILE_PHONE = 'mobile phone';
-export const CATEGORY_GAS = 'auto oil & gas';
+export const CATEGORY_CAR_FUEL = 'car fuel';
 export const CATEGORY_CAR_MAINTENANCE = 'car stuff';
 export const CATEGORY_INSURANCE_AUTO = 'auto insurance';
 export const CATEGORY_INSURANCE_LIFE = 'life insurance';
