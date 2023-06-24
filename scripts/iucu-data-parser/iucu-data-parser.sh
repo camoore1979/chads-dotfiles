@@ -20,3 +20,11 @@ function iucu-data-parser {
   rm $tmpFile
 }
 alias cparseiucu='iucu-data-parser';
+
+function runIucuDataParser {
+  cd ~/Downloads
+  mv Export.csv iucu-transactions.csv
+  iucu-data-parser iucu-transactions.csv
+}
+alias crip='runIucuDataParser';
+
