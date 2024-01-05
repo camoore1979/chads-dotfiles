@@ -1,0 +1,33 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "editor.detectIndentation": false,
+    "editor.fontFamily": "Operator Mono, Fira Code iScript",
+    "editor.formatOnSave": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.tabSize": 2,
+    "editor.tokenColorCustomizations": {
+        "comments": "#FF8C00"
+    },
+    "eslint.alwaysShowStatus": true,
+    "files.autoSave": "onFocusChange",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    },
+    "githubPullRequests.fileListLayout": "tree",
+    "githubPullRequests.pullBranch": "never",
+    "npm.keybindingsChangedWarningShown": true,
+    "redhat.telemetry.enabled": false,
+    "terminal.integrated.defaultProfile.osx": "JavaScript Debug Terminal",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": 2,
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#FF8C00"
+    },
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "workbench.iconTheme": "eq-material-theme-icons"
+}
