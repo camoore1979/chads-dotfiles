@@ -1,5 +1,5 @@
 import {
-  CATEGORY_BOOKS_PERIODICALS, CATEGORY_CAR_FUEL, CATEGORY_CHAD_SPENDING, CATEGORY_DEBT_AMERICAN_EXPRESS, CATEGORY_DEBT_CARS, CATEGORY_DEBT_MORTGAGE, CATEGORY_DEBT_ONB_LOAN, CATEGORY_ELECTRICITY, CATEGORY_ENTERTAINMENT, CATEGORY_GIVING_CAMPUS_MINISTRY, CATEGORY_GROCERIES, CATEGORY_GYM, CATEGORY_INSURANCE_AUTO, CATEGORY_INSURANCE_LIFE, CATEGORY_INTERNET, CATEGORY_RECREATION, CATEGORY_RESTAURANTS, CATEGORY_SAVINGS_CHRISTMAS, CATEGORY_SAVINGS_EMERGENCY, CATEGORY_SAVINGS_REGULAR, CATEGORY_TECHNOLOGY, CATEGORY_TONYA_SPENDING, CODE_AUTOPAY, CODE_DEBIT_CARD, CODE_TRANSFER, CODE_WITHDRAWAL
+  CATEGORY_BOOKS_PERIODICALS, CATEGORY_CAR_FUEL, CATEGORY_CHAD_SPENDING, CATEGORY_DEBT_CARS, CATEGORY_DEBT_CREDIT_CARDS, CATEGORY_DEBT_IUCU_HELOC, CATEGORY_DEBT_MORTGAGE, CATEGORY_DEBT_ONB_LOAN, CATEGORY_ELECTRICITY, CATEGORY_ENTERTAINMENT, CATEGORY_GIVING_CAMPUS_MINISTRY, CATEGORY_GROCERIES, CATEGORY_GYM, CATEGORY_INSURANCE_AUTO, CATEGORY_INSURANCE_LIFE, CATEGORY_INTERNET, CATEGORY_RECREATION, CATEGORY_RESTAURANTS, CATEGORY_SAVINGS_CHAD, CATEGORY_SAVINGS_CHRISTMAS, CATEGORY_SAVINGS_EMERGENCY, CATEGORY_SAVINGS_HOUSE, CATEGORY_SAVINGS_TONYA, CATEGORY_TECHNOLOGY, CATEGORY_TONYA_SPENDING, CODE_AUTOPAY, CODE_DEBIT_CARD, CODE_TRANSFER, CODE_WITHDRAWAL
 } from '../../constants.mjs';
 import { performTransformation } from '../performTransformation.mjs';
 
@@ -17,13 +17,13 @@ const handleSavings = ({ description, memo }) => performTransformation([descript
   category: CATEGORY_SAVINGS_EMERGENCY, code: CODE_WITHDRAWAL, transaction: 'Transfer to Capital One 360 Savings'
 }) ||
   performTransformation([description, memo], 'Transfer to Share 0002', {
-    category: CATEGORY_SAVINGS_REGULAR, code: CODE_TRANSFER, transaction: 'Transfer to Share 0002 (Tonya\'s Savings)'
+    category: CATEGORY_SAVINGS_TONYA, code: CODE_TRANSFER, transaction: 'Transfer to Share 0002 (Tonya\'s Savings)'
   }) ||
   performTransformation([description, memo], 'Transfer to Share 0003', {
-    category: CATEGORY_SAVINGS_REGULAR, code: CODE_TRANSFER, transaction: 'Transfer to Share 0003 (Chad\'s Savings)'
+    category: CATEGORY_SAVINGS_CHAD, code: CODE_TRANSFER, transaction: 'Transfer to Share 0003 (Chad\'s Savings)'
   }) ||
-  performTransformation([description, memo], 'Transfer to Share 0006', {
-    category: CATEGORY_SAVINGS_CHRISTMAS, code: CODE_TRANSFER, transaction: 'Transfer to Share 0006 (Christmas)'
+  performTransformation([description, memo], 'Transfer To Share 0001', {
+    category: CATEGORY_SAVINGS_HOUSE, code: CODE_TRANSFER, transaction: 'Transfer to Share 0001 (House and Yard)'
   });
 
 const handleDebt = ({ description, memo }) => performTransformation([description, memo], 'Old National', {
@@ -35,8 +35,14 @@ const handleDebt = ({ description, memo }) => performTransformation([description
   performTransformation([description, memo], 'Transfer to Loan 0006', {
     category: CATEGORY_DEBT_CARS, code: CODE_AUTOPAY, transaction: 'Transfer to Loan 0006 (Mitsubishi Lancer)'
   }) ||
+  performTransformation([description, memo], 'Transfer to Loan 0001', {
+    category: CATEGORY_DEBT_CARS, code: CODE_AUTOPAY, transaction: 'Transfer to Loan 0001 (Toyota Corolla)'
+  }) ||
+  performTransformation([description, memo], 'Transfer to Loan 0100', {
+    category: CATEGORY_DEBT_IUCU_HELOC, code: CODE_AUTOPAY, transaction: 'Transfer to Loan 0100 (IUCU HELOC)'
+  }) ||
   performTransformation([description, memo], 'amex epayment', {
-    category: CATEGORY_DEBT_AMERICAN_EXPRESS, code: CODE_AUTOPAY, transaction: 'American Express payment'
+    category: CATEGORY_DEBT_CREDIT_CARDS, code: CODE_AUTOPAY, transaction: 'American Express payment'
   });
 
 const handleAutoGas = ({ description, memo }) => performTransformation([description, memo], ['Kroger #2', 'GETGO'], { category: CATEGORY_CAR_FUEL, code: CODE_DEBIT_CARD });

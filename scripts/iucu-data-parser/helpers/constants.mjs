@@ -8,11 +8,13 @@ export const CATEGORY_INCOME_PULL_FROM_SAVINGS = 'pull from savings';
 export const CATEGORY_GIVING_REDEEMER = 'redeemer';
 export const CATEGORY_GIVING_CAMPUS_MINISTRY = 'campus ministry';
 
-export const CATEGORY_SAVINGS_REGULAR = 'regular savings';
+export const CATEGORY_SAVINGS_HOUSE = 'house savings';
 export const CATEGORY_SAVINGS_EMERGENCY = 'emergency fund';
-export const CATEGORY_SAVINGS_CHRISTMAS = 'christmas';
+export const CATEGORY_SAVINGS_CHAD = 'chad savings';
+export const CATEGORY_SAVINGS_TONYA = 'tonya savings';
 
-export const CATEGORY_DEBT_AMERICAN_EXPRESS = 'american express';
+export const CATEGORY_DEBT_CREDIT_CARDS = 'credit cards';
+export const CATEGORY_DEBT_IUCU_HELOC = 'IUCU heloc';
 export const CATEGORY_DEBT_IUCU_MASTERCARD = 'iucu mastercard';
 export const CATEGORY_DEBT_ONB_LOAN = 'ONB loan';
 export const CATEGORY_DEBT_CARS = 'car loans';
