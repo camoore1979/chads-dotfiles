@@ -1,6 +1,7 @@
 // CATEGORIES for budget
 export const CATEGORY_INCOME_TONYA = 'tonya';
 export const CATEGORY_INCOME_POLARIS = 'polaris';
+export const CATEGORY_INCOME_PRECISION = 'precision';
 export const CATEGORY_INCOME_KIDS_CHIP_IN = 'kids chip-in';
 export const CATEGORY_INCOME_MISC = 'misc income';
 export const CATEGORY_INCOME_PULL_FROM_SAVINGS = 'pull from savings';
