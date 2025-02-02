@@ -11,8 +11,8 @@ export const CATEGORY_GIVING_CAMPUS_MINISTRY = 'campus ministry';
 
 export const CATEGORY_SAVINGS_HOUSE = 'house savings';
 export const CATEGORY_SAVINGS_EMERGENCY = 'emergency fund';
-export const CATEGORY_SAVINGS_CHAD = 'chad savings';
-export const CATEGORY_SAVINGS_TONYA = 'tonya savings';
+export const CATEGORY_SAVINGS_CHAD = 'chad account';
+export const CATEGORY_SAVINGS_TONYA = 'tonya account';
 
 export const CATEGORY_DEBT_CREDIT_CARDS = 'credit cards';
 export const CATEGORY_DEBT_IUCU_HELOC = 'IUCU heloc';
@@ -22,8 +22,8 @@ export const CATEGORY_DEBT_CARS = 'car loans';
 export const CATEGORY_DEBT_MORTGAGE = 'mortgage';
 
 export const CATEGORY_GROCERIES = 'groceries';
-export const CATEGORY_CHAD_SPENDING = 'chad spending';
-export const CATEGORY_TONYA_SPENDING = 'tonya spending';
+export const CATEGORY_CHAD_PURCHASES = 'chad purchases';
+export const CATEGORY_TONYA_PURCHASES = 'tonya purchases';
 export const CATEGORY_RESTAURANTS = 'restaurants';
 
 export const CATEGORY_HOUSE_YARD = 'house/yard';
